@@ -1,18 +1,52 @@
 .BreedCard {
+    display: flex;
+    justify-self: center;
+    
+    &__container{
+        border: 10px outset purple;
+        border-radius: 10px;
+        padding: 50px;
+        margin: 50px 50px 25px 50px;
+        width: 200px;
+        height: 400px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'breed_name breed_name'
+            'country breed_origin'
+            'coat pattern';
 
-    &__Breed {
-     
-        &_Name {
+        background-image: url("../../assests/AdobeStock_178979392.jpeg");
+            
+    }
 
-        }
-
-        &_Icon {
-
-        }
+    &__Name {
+        grid-area: breed_name;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 5px inset purple;
+        border-radius: 5px;
+    }
+    &__Country {
+        grid-area: country; 
+    }
+    &__Origin {
+        grid-area: breed_origin; 
+    }
+    &__Coat {
+        grid-area: coat; 
+    }
+    &__Pattern {
+        grid-area: pattern; 
+    }
+    
+    &_Icon {
+        padding-left: 20px;
     }
 
     &__text{
-
         &__heading {
 
         }

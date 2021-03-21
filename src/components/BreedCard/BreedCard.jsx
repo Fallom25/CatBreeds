@@ -4,6 +4,7 @@ import { faHeart as faOpenHeart } from "@fortawesome/free-regular-svg-icons";
 import styles from "./BreedCard.module.scss";
 
 
+
 const BreedCard = ({ breedInformation, toggleFav }) => {
     const breed = breedInformation;
     const favIcon = breed.isFav ? faHeart : faOpenHeart;
@@ -14,20 +15,28 @@ const BreedCard = ({ breedInformation, toggleFav }) => {
     }
     return (
         <div className = {styles.BreedCard}>
-            <div className = {styles.BreedCard__Breed}>
-                <h3 className = {styles.cardBack__Breed_Name}>{breed.breed}</h3>
-                <div>
-                    <FontAwesomeIcon className = {styles.cardBack__Breed_Icon} icon={favIcon} onClick = {handletoggleFav}/>
+            <div className = {styles.BreedCard__container}>
+                <div className = {styles.BreedCard__Name}>
+                    <h3>{breed.breed}</h3>
+                    <FontAwesomeIcon className = {styles.BreedCard__Icon} icon={favIcon} onClick = {handletoggleFav}/>
+                </div>
+                <div className = {styles.BreedCard__Country}>
+                    <h4 className = {styles.BreedCard__text_heading}>Country</h4>
+                    <p className = {styles.BreedCard__text_info}>{!breed.country ? "N/A" : breed.country}</p>
+                </div>
+                <div className = {styles.BreedCard__Origin}>
+                    <h4 className = {styles.BreedCard__text_heading}>Origin</h4>
+                    <p className = {styles.BreedCard__text_info}>{!breed.origin ? "N/A" : breed.origin}</p>
+                </div>
+                <div className = {styles.BreedCard__Coat}>
+                    <h4 className = {styles.BreedCard__text_heading}>Coat</h4>
+                    <p className = {styles.BreedCard__text_info}>{!breed.coat ? "N/A" : breed.coat}</p>
+                </div>
+                <div className = {styles.BreedCard__Pattern}>
+                    <h4 className = {styles.BreedCard__text_heading}>Pattern</h4>
+                    <p className = {styles.BreedCard__text_info}>{!breed.pattern ? "N/A" : breed.pattern}</p>
                 </div>
             </div>
-            <h5 className = {styles.BreedCard__text_heading}>Country</h5>
-            <p className = {styles.BreedCard__text_info}>{breed.country}</p>
-            <h5 className = {styles.BreedCard__text_heading}>Origin</h5>
-            <p className = {styles.BreedCard__text_info}>{breed.origin}</p>
-            <h5 className = {styles.BreedCard__text_heading}>Coat</h5>
-            <p className = {styles.BreedCard__text_info}>{breed.coat}</p>
-            <h5 className = {styles.BreedCard__text_heading}>Pattern</h5>
-            <p className = {styles.BreedCard__text_info}>{breed.pattern}</p>
         </div>
     );
 }

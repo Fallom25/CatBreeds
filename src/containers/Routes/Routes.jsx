@@ -7,14 +7,14 @@ import Dashboard from "../Dashboard";
 import Favourites from "../Favourites";
 import NotFound from "../NotFound";
 
-const Routes = ({ breedInfomation, toggleFav }) => {
+const Routes = ({ breedInformation, toggleFav }) => {
     return (
         <Switch>
             <Route exact path="/">
-                <Dashboard breedInfomation={breedInfomation} toggleFav={toggleFav} />
+                <Dashboard breedInformation={breedInformation} toggleFav={toggleFav} />
             </Route>
             <Route path="/favourites">
-                <Favourites breedInfomation={breedInfomation} toggleFav={toggleFav}/>
+                <Favourites breedInformation={breedInformation} toggleFav={toggleFav}/>
             </Route>
             <Route path="*">
                 <NotFound />

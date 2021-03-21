@@ -11,9 +11,8 @@ const Favourites = ({ breedInformation, toggleFav }) => {
 
     const displayFavBreeds = favBreeds.length
         ? <CardList breedInformation={favBreeds} toggleFav={toggleFav}/>
-        : <FeedbackPanel title={"No Breeds Favourited"} description={"You have no Favourites, Please have a look through all out breeds and pick out your Favs"}/>
+        : <FeedbackPanel title={"No Breeds Favourited"} description={"You have no Favourites, Please have a look through all our breeds and pick out your Favs"}/>
     
-        
     return (
         <>
             {displayFavBreeds}

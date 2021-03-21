@@ -1,12 +1,32 @@
 .Navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 10px solid purple;
+    background-image: url("../../assests/AdobeStock_178979392.jpeg");
+    &__link{
+        text-decoration: none;
+        color:black;   
+    }
 
     &__heading {
-
+        padding: 20px;
+        border: 3px solid purple;
+        border-radius: 10px;
+        background-color: purple;
+        color: #D98F4E;
     }
     &__search {
-
+        position:absolute;
     }
-    &__icon {
-
+    &__fav {
+        display: flex;
+        align-items: center;
+        justify-items: space-evenly;
+        &_icon {
+            padding-left: 10px;
+            font-size: xx-large;
+            color: purple;
+        }
     }
 }

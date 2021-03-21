@@ -1,15 +1,14 @@
 import BreedCard from "../BreedCard";
+import styles from "./CardList.module.scss";
 
 const CardList = ( {breedInformation, toggleFav} ) => {
 
     return (
-        <>
+        <div className={styles.CardList}>
             {breedInformation.map( (breed, index) => 
-                <div>
                     <BreedCard key={index} breedInformation={breed} toggleFav={toggleFav} />
-                </div>
             )}
-        </>
+        </div>
     )
 }
 

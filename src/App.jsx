@@ -32,7 +32,6 @@
 	}
 
 	useEffect(() => {
-		console.log("updateBreeds Running at start");
 		updateBreeds();
 	}, []);
 
@@ -46,7 +45,7 @@
 		<Router>
 			<Navbar setSearch={setBreedSearch}/>
 			<div className={styles.App__content}>
-				<Routes breedInfomation={displayedBreeds} toggleFav={toggleFav}/>
+				<Routes breedInformation={displayedBreeds} toggleFav={toggleFav}/>
 			</div>
 			</Router>
 		</div>
