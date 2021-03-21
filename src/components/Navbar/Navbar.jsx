@@ -2,7 +2,7 @@ import styles from "./Navbar.module.scss";
 import Search from "../Search";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, lg } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ setSearch }) => {

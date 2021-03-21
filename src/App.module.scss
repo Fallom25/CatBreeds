@@ -1,7 +1,9 @@
 .App {
   text-align: center;
+  background-image: url("./assests/AdobeStock_293274833.jpeg");
+  min-height:100vh;
 
   &__content{
-    background-image: url("./assests/AdobeStock_293274833.jpeg");
+    
   }
 }

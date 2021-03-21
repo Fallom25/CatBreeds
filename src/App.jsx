@@ -9,23 +9,23 @@
 
 	const App = () => {
 		const [breedSearch, setBreedSearch] = useState('');
-		const [breedInfomation, setbreedInfomation] = useState([]);
+		const [breedInformation, setbreedInformation] = useState([]);
 		const [displayedBreeds, setDisplayedBreeds] = useState([]);
 
 	const updateBreeds = async () => {
 		const newBreeds = await getBreeds();
 		const breedsWithFav = addIsFav(newBreeds);
-		setbreedInfomation(breedsWithFav);
+		setbreedInformation(breedsWithFav);
 	}
 
 	const updateDisplayedBreeds = () => {
-		setDisplayedBreeds(breedInfomation.filter(eachBreed => {
+		setDisplayedBreeds(breedInformation.filter(eachBreed => {
 		return eachBreed.breed.toLowerCase().includes(breedSearch.toLowerCase());
 		}));
 	}
 
 	const toggleFav = (breed) => {
-		setbreedInfomation(breedInfomation.map(eachBreed => {
+		setbreedInformation(breedInformation.map(eachBreed => {
 		return eachBreed.breed !== breed.breed 
 			? eachBreed : { ...eachBreed, isFav: !eachBreed.isFav };
 		}));
@@ -37,7 +37,7 @@
 
 	useEffect(() => {
 		updateDisplayedBreeds();
-	}, [breedSearch, breedInfomation]);
+	}, [breedSearch, breedInformation]);
 
 
 	return (
